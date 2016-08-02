@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>
+      Keyboard Focus Style Test Page
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script>
+      // remove no-js and add 'js' & 'has-js' to the HTML
+      document.documentElement.className = document.documentElement.className.replace('no-js', " ");
+      document.documentElement.className += ' js ';
+    </script>
+    <style>
+      :focus {
+        box-shadow: none;
+        outline: none;
+      }
+
+      .no-js :focus,
+      .keyboard-focus :focus {
+        background: #ffffeb;
+        box-shadow: 0 0 2px 1px #00cdcb;
+      }
+
+
+
+      /* demo styling */
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        font-size: 20px;
+      }
+
+      button,
+      input[type="text"] {
+        font-size: inherit;
+      }
+
+      p {
+        margin: 40px 0;
+      }
+
+      .demo {
+        margin: 20px auto;
+        max-width: 660px;
+        padding: 20px;
+      }
+
+      .label__text {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="demo">
+        <h1>
+            Keyboard Focus Test Page
+        </h1>
+
+        <p>
+            A little bit of text, just to have something else to read on the page.
+        </p>
+
+        <label for="text_input">
+          <span class="label__text">
+            Input Label
+          </span>
+          <input type="text" id="text_input" />
+        </label>
+
+        <p>
+          We should see what a button focus looks like too...
+        </p>
+
+        <button type="button">
+          I'm a button
+        </button>
+
+        <p>
+          Oh, and links too...
+        </p>
+
+        <p>
+          <a href="#!">
+            I'm a link, but I don't go anywhere cause this is a test.
+          </a>
+        </p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
+
+

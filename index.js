@@ -1,4 +1,4 @@
-(function () {
+;(function () {
     'use strict';
 
     function keyboardFocus (e) {
@@ -15,8 +15,16 @@
             default:
                 document.documentElement.classList.add('keyboard-focus');
                 document.removeEventListener('keydown', keyboardFocus, false);
+                document.addEventListener('mouseup', mouseFocus, false);
         }
     }
 
+    function mouseFocus (e) {
+        document.documentElement.classList.remove('keyboard-focus');
+        document.removeEventListener('mouseup', mouseFocus, false);
+        document.addEventListener('keydown', keyboardFocus, false);
+    }
+
     document.addEventListener('keydown', keyboardFocus, false);
+
 })();
